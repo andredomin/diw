@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    
+}
+
+#main_header{
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    height: 15%;
+}
+
+.abajo{
+    background-color: black;
+    width: 100%;
+    height: 2000%;
+}
+
+body{
+    background-color: rgb(247, 246, 240) ;
+    
+}
+
+#rojo{
+    color: red;
+}
+
+
+
+ul{
+    list-style: none;
+    position: absolute;
+    color: white;
+    background-color: black;
+    width: 100%;
+    right: 0%;
+    top: 0%;
+    opacity: 0;
+    height: 100vh;
+    padding-bottom: 50%;
+}
+
+
+#burger{
+    position: absolute;
+    right: 5%;
+    top:25%;
+    cursor:pointer;
+    z-index: 10;
+}
+
+
+.show{
+    position: fixed;
+    z-index: 9;
+    transition: opacity 3s;
+    opacity: 1;
+}
+
+
+
+.seccion{
+    background-color: rgb(252, 250, 249);
+    width: 0;
+    height: 0;
+    margin-bottom: 5%;
+}
+
+#catalogo{
+    margin-left: 15%;
+    margin-bottom: 40%;
+}
+
+#parapicar{
+    border-radius: 2%;
+    z-index: 8; 
+    width: 33%;
+    margin-bottom: 4%;
+} 
+
+#carnespescados{
+    position: relative;
+    border-radius: 2%;
+    z-index: 8;
+    margin-left: 30%;
+    margin-top: 0%;
+    height: 0;
+    width: 33%;
+   
+} 
+
+#postres{
+    margin-left: 65%;
+    margin-top: -5%;
+    width: 33%;
+}
+
+#pie{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-top: 15%;
+}
+
+#links{
+    z-index: 0;
+}
+
+@keyframes mover{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes mover2{
+    0%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes headeranim{
+    0%{
+        transform: translateY(5%);
+    }
+}
+
+#primerafila{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 10%;
+    
+}
+
+#segundafila{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 10%;
+    
+}
+
+#tercerafila{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+#croquetas, #empanadilla, #tortilla{
+    margin-right: 5%;
+    
+}
+
+#calamares, #tablaquesos, #tablaembutidos{
+    margin-right: 5%;
+    
+}
+
+#ensaladilla, #pizzaporcion, #minihamburguesa {
+    margin-right: 5%;
+}
+
+figure{
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-color: #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+figure figcaption::before{
+content: "";
+position: absolute;
+inset: 20px;
+border: 2px solid #fff;
+opacity: 0;
+scale: 1.25;
+transition: opacity 0.25s, scale 0.25s;
+}
+
+figure:hover figcaption::before {
+    opacity: 1;
+    scale: 1;
+}
+
+figure img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    scale: 1.15;
+    transition: opacity 0.25s, scale 0.35s;
+}
+
+figure:hover img {
+    opacity: 0.5;
+    scale: 1;
+    filter: grayscale(0);
+}
+
+figure figcaption {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+figure h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+figure p {
+    font-size: 14px;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s, translate 0.25s;
+}
+
+figure:hover p {
+    opacity: 1;
+    translate: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
